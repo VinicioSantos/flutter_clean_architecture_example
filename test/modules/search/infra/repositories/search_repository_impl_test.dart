@@ -14,7 +14,7 @@ main(){
 
   final repository = SearchRepositoryImpl(datasource);
 
-  test('deve retornar uma lista de Resultsearch(FAILED)', () async{
+  test('deve retornar uma lista de Resultsearch', () async{
     when(() => datasource.getSearch(any()))
     .thenAnswer((_) async => <ResultSearchModel>[]);
 
