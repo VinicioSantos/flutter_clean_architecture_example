@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_clean_architecture_example/modules/search/domain/errors/errors.dart';
 import 'package:flutter_clean_architecture_example/modules/search/infra/models/result_search_model.dart';
 
 import '../../infra/datasource/search_datasource.dart';
@@ -19,7 +20,7 @@ class GithubDatasource implements SearchDatasource {
         .toList();
       return list;
     } else {
-      throw Exception();
+      throw DatasourceError();
     }
   }
 
