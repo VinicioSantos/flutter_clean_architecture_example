@@ -2,6 +2,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_clean_architecture_example/modules/search/domain/usecases/search_by_text.dart';
 import 'package:flutter_clean_architecture_example/modules/search/infra/repositories/search_repository_impl.dart';
+import 'package:flutter_clean_architecture_example/modules/search/presenter/search/search_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'app_widget.dart';
@@ -18,6 +19,6 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-        ChildRoute('/', child: (context, args) => HomePage()),
+        ChildRoute('/', child: (context, args) => SearchPage()),
   ];
 }
