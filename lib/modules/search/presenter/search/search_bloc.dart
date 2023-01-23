@@ -13,6 +13,6 @@ class SearchBloc extends Bloc<String, SearchState> {
     yield SearchLoading();
     final result = await usecase(searchText);
     // await Future.delayed(Duration(seconds: 2));
-    yield result.fold((l) => SearchError(message), (r) => null)
+    yield result.fold((l) => SearchError("erro de pesquisa"), (r) => null)
   }
 }
