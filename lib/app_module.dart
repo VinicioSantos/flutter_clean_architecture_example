@@ -19,6 +19,7 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
+//rota de pesquisa
         ChildRoute('/', child: (context, args) => SearchPage()),
   ];
 }
