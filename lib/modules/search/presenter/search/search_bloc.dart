@@ -12,7 +12,7 @@ class SearchBloc extends Bloc<String, SearchState> {
   Stream<SearchState> mapEventToState(String searchText) async* {
     yield SearchLoading();
     final result = await usecase(searchText);
-    // await Future.delayed(Duration(seconds: 2));
-    yield result.fold((l) => SearchError("erro de pesquisa"), (r) => null)
+    //await Future.delayed(Duration(seconds: 2));
+    yield result.fold((l) => SearchError(l), (r) => SearchSuccess(r));
   }
 }

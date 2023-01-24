@@ -1,4 +1,5 @@
 import '../../../domain/entities/result_search.dart';
+import '../../../domain/errors/errors.dart';
 
 abstract class SearchState {
 
@@ -10,11 +11,14 @@ class SearchSuccess implements SearchState {
   SearchSuccess(this.list);
 }
 
+class SearchStart implements SearchState {}
+
+class SearchLoading implements SearchState {}
+
 class SearchError implements SearchState {
-  final String message;
+  final FailureSearch message;
 
   SearchError(this.message);
 }
 
-class SearchLoading implements SearchState {}
-class SearchStart implements SearchState {}
+
