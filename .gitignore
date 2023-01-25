@@ -1,4 +1,5 @@
 .dart_tool/package_config_subset
 .dart_tool/package_config.json
 .packages
-.dart_tool
+.dart_tool/
+.build/
